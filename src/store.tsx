@@ -14,7 +14,7 @@ export interface CalcWritableType {
   removeOne: () => void
   reset: () => void
 }
-
+// upper display
 export const useCalcDisplayedStore = create<CalcDisplayedType>((set) => ({
   value: 0,
   increment: () => set((state) => ({ value: state.value + 1 })),
@@ -23,6 +23,7 @@ export const useCalcDisplayedStore = create<CalcDisplayedType>((set) => ({
   set: (n) => set(() => ({ value: n }))
 }))
 
+//lower display
 export const useCalcWritableStore = create<CalcWritableType>((set) => ({
   value: "",
   addOne: (c) => set((state) => ({ value: state.value + c })),

@@ -19,7 +19,7 @@ export function CalculatorButton(props: {
         if (shouldRawPrint) writableDisplay.addOne(String(value))
       }}
       className={classNames(
-        "bg-red-300 rounded-2xl border-2 text-center font-bold p-4 hover:bg-red-400 cursor-pointer",
+        "bg-red-300 rounded-2xl text-center font-bold p-4 hover:bg-red-400 cursor-pointer select-none opacity-90 shadow-2xl			",
         styleName
       )}
     >
@@ -39,7 +39,7 @@ export function CalculatorCommandButton(props: {
     <div
       {...rest}
       className={classNames(
-        "bg-red-300 rounded-2xl	border-2 text-center font-bold p-4 hover:bg-red-400 cursor-pointer italic",
+        "bg-red-300 rounded-2xl text-center font-medium p-4 hover:bg-red-400 cursor-pointer  select-none opacity-90	shadow-2xl		",
         styleName
       )}
     >

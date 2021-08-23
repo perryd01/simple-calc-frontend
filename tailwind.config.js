@@ -3,7 +3,11 @@ module.exports = {
   // https://tailwindcss.com/docs/just-in-time-mode
   // mode: "jit",
   theme: {
-    extend: {},
+    extend: {
+        backgroundImage: theme => ({
+            'basic-bg': "url('https://picsum.photos/2000/2000')"
+        })
+    },
   },
   variants: {},
   plugins: [],

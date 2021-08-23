@@ -11,20 +11,36 @@ export function CalculatorKeyPad(props: { state?: any }) {
       <CalculatorButton value={1} />
       <CalculatorButton value={2} />
       <CalculatorButton value={3} />
-      <CalculatorButton value="+" styleName="bg-yellow-200" buttonType={ButtonTypes.Operator} />
+      <CalculatorButton
+        value="+"
+        styleName="bg-yellow-200 hover:bg-yellow-400"
+        buttonType={ButtonTypes.Operator}
+      />
       <CalculatorButton value={4} />
       <CalculatorButton value={5} />
       <CalculatorButton value={6} />
-      <CalculatorButton value="-" styleName="bg-yellow-200" buttonType={ButtonTypes.Operator} />
+      <CalculatorButton
+        value="-"
+        styleName="bg-yellow-200 hover:bg-yellow-400"
+        buttonType={ButtonTypes.Operator}
+      />
       <CalculatorButton value={7} />
       <CalculatorButton value={8} />
       <CalculatorButton value={9} />
-      <CalculatorButton value="*" styleName="bg-yellow-200" buttonType={ButtonTypes.Operator} />
+      <CalculatorButton
+        value="*"
+        styleName="bg-yellow-200 hover:bg-yellow-400"
+        buttonType={ButtonTypes.Operator}
+      />
       <CalculatorButton value={0} styleName="col-span-3" />
-      <CalculatorButton value="/" styleName="bg-yellow-200" buttonType={ButtonTypes.Operator} />
+      <CalculatorButton
+        value="/"
+        styleName="bg-yellow-200 hover:bg-yellow-400"
+        buttonType={ButtonTypes.Operator}
+      />
       <CalculatorCommandButton
         value="="
-        styleName="bg-yellow-200 col-span-3"
+        styleName="bg-yellow-200 col-span-3 hover:bg-yellow-400"
         buttonType={ButtonTypes.CommandEnter}
         onClick={() => {
           const v = doTheMath(writableDisplay.value)
@@ -33,7 +49,11 @@ export function CalculatorKeyPad(props: { state?: any }) {
           valueDisplay.set(v.value)
         }}
       />
-      <CalculatorButton value="." styleName="bg-yellow-200" buttonType={ButtonTypes.Operator} />
+      <CalculatorButton
+        value="."
+        styleName="bg-yellow-200 hover:bg-yellow-400"
+        buttonType={ButtonTypes.Operator}
+      />
       <CalculatorCommandButton
         value="delete one"
         buttonType={ButtonTypes.CommandDelete}
@@ -58,7 +78,10 @@ export function CalculatorKeyPad(props: { state?: any }) {
         value="Clear value"
         styleName="col-span-4"
         buttonType={ButtonTypes.MemoryReset}
-        onClick={() => valueDisplay.reset()}
+        onClick={() => {
+          valueDisplay.reset()
+          writableDisplay.reset()
+        }}
       />
     </div>
   )
