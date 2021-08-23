@@ -4,7 +4,7 @@ import { ContainerPanel } from "./components/Container"
 
 function App() {
   return (
-    <div className="bg-white h-full w-full min-h-screen">
+    <div className="bg-gray-400 h-full w-full min-h-screen">
       <ContainerPanel>
         <CalculatorPanel />
       </ContainerPanel>
